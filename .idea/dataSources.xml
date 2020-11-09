@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="jdbc:h2:tcp://localhost/~/Desktop/CifoJava/myDB" uuid="cf76f32e-6872-4f9b-96b3-d4879f35ef2d">
+      <driver-ref>h2.unified</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.h2.Driver</jdbc-driver>
+      <jdbc-url>jdbc:h2:tcp://localhost/~/Desktop/CifoJava/myDB</jdbc-url>
+    </data-source>
+  </component>
+</project>
