@@ -1,10 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <link rel="stylesheet" href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
+    <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <style>
+        table , form {
+            margin:20px;
+        }
 
+    </style>
+
+    <title>Title</title>
+
+</head>
+
+<h5>Library</h5>
+
+<body>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Pages</th>
+            <th>Option</th>
+        </tr>
+
+        <table>
+            <tr th:each ="book:${listOfBooks}">
+                <td th:text = "${book.title}"></td>
+                <td th:text = "${book.ISBN}"></td>
+                <td th:text = "${book.pages}"></td>
+
+                <td><a th:href="@{deleteBook(title=${book.title})}"
+                class = "btn btn-primary btn-sm">DELETE</a></td>
+
+            </tr>
+        </table>
+
+    </table>
+<form action="newBook">
+    <input type="submit" value="NEW" class="btn btn-primary btn-sm"/>
+</form>
 </body>
 </html>

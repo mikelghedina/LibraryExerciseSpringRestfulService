@@ -24,7 +24,4 @@ public class Book {
         this.pages = pages;
     }
 
-    public Book() {
-
-    }
 }
