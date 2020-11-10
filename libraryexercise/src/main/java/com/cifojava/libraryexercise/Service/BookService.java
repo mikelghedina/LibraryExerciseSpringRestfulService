@@ -20,6 +20,9 @@ public class BookService {
         bookRepository.save(book);
     }
 
+    /*public void deleteBookByTitle(String title){
+        bookRepository.deleteBookByTitle(title);
+    }*/
     public void deleteBook(Book book){
         bookRepository.delete(book);
     }

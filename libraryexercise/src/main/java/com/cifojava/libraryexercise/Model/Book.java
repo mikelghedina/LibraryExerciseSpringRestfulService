@@ -4,16 +4,17 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "BOOKS")
 @Getter @Setter @NoArgsConstructor
 public class Book {
 
-    private @Id int id;
+    @Id
+    @GeneratedValue
+    private int id;
+
     private String title;
     private String ISBN;
     private int pages;
@@ -22,6 +23,10 @@ public class Book {
         this.title = title;
         this.ISBN = ISBN;
         this.pages = pages;
+    }
+
+    public Book(String title){
+        this.title = title;
     }
 
 }

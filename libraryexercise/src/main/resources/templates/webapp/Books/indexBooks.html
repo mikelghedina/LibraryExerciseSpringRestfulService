@@ -15,10 +15,7 @@
     <title>Title</title>
 
 </head>
-
 <h5>Library</h5>
-
-<body>
     <table>
         <tr>
             <th>Title</th>
@@ -34,7 +31,7 @@
                 <td th:text = "${book.pages}"></td>
 
                 <td><a th:href="@{deleteBook(title=${book.title})}"
-                class = "btn btn-primary btn-sm">DELETE</a></td>
+                class = "btn btn-primary btn-danger">DELETE</a></td>
 
             </tr>
         </table>
@@ -43,5 +40,4 @@
 <form action="newBook">
     <input type="submit" value="NEW" class="btn btn-primary btn-sm"/>
 </form>
-</body>
 </html>
