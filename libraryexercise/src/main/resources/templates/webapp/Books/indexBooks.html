@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<html lang ="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" thref="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="/webjars/bootstrap/4.2.1/css/bootstrap.min.css">
-    <script src="/webjars/jquery/3.0.0/jquery.min.js"></script>
-    <script src="/webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <style>
+        table , form {
+            margin:20px;
+        }
 
+    </style>
+    <title></title>
 </head>
-<body>
-<thead>
-        <tr>
-            <th>Title</th>
-            <th>ISBN</th>
-            <th>Pages</th>
-            <th>Option</th>
-        </tr>
+<h5> Library</h5>
+<table class = "table table-striped table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">ISBN</th>
+        <th scope="col">Pages</th>
+        <th scope="col">Option</th>
 
-        <table class="w3-table w3-blue">
-            <tr th:each ="book:${listOfBooks}">
-                <td th:text = "${book.title}"></td>
-                <td th:text = "${book.ISBN}"></td>
-                <td th:text = "${book.pages}"></td>
-
-                <td><a th:href="@{deleteBook(title=${book.title})}"
-                class = "btn btn-primary btn-danger">DELETE</a></td>
-            </tr>
-        </table>
-
+    </tr>
     </thead>
+    <tbody>
+        <tr th:each="book:${listOfBooks}">
 
+            <td th:text="${book.title}"></td>
+            <td th:text="${book.ISBN}"></td>
+            <td th:text="${book.pages}"></td>
+
+            <td><a th:href="@{/deleteBook(title=${book.title})}"
+                   class="btn btn-primary btn-danger">DELETE</a></td>
+
+        </tr>
+    </tbody>
+</table>
     <form action="newBook">
-    <input type="submit" value="NEW" class="btn btn-primary btn-sm"/>
-
+        <input type="submit" value="NEW" class="btn btn-primary btn-sm"/>
     </form>
-</body>
-
 </html>

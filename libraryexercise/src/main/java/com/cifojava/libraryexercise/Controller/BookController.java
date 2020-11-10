@@ -7,7 +7,9 @@ import com.cifojava.libraryexercise.Service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -35,19 +37,15 @@ public class BookController {
         return "webapp/Books/indexBooks";
     }
 
-    @RequestMapping("/deleteBook")
-    public String deleteBook(@RequestParam("title") String title, Model model){
+    @RequestMapping(value ="/deleteBook/{title}")
+    public String deleteBook(@PathVariable(name = "title") String title, Model model){
 
-        Book book = new Book(title);
-
-        bookService.deleteBook(book);
+        bookService.deleteBookByTitle(title);
 
         model.addAttribute("listOfBooks", bookService.findAllBooks());
         System.out.println("title: "+ title);
         return "webapp/Books/indexBooks";
     }
-
-
 
 
 }

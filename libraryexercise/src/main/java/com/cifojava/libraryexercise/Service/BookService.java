@@ -6,7 +6,10 @@ import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
+@Transactional
 public class BookService {
 
     @Autowired
@@ -20,9 +23,9 @@ public class BookService {
         bookRepository.save(book);
     }
 
-    /*public void deleteBookByTitle(String title){
+    public void deleteBookByTitle(String title){
         bookRepository.deleteBookByTitle(title);
-    }*/
+    }
     public void deleteBook(Book book){
         bookRepository.delete(book);
     }
