@@ -29,14 +29,11 @@
     </thead>
     <tbody>
         <tr th:each="book:${listOfBooks}">
-
             <td th:text="${book.title}"></td>
             <td th:text="${book.ISBN}"></td>
             <td th:text="${book.pages}"></td>
-
-            <td><a th:href="@{/deleteBook(title=${book.title})}"
-                   class="btn btn-primary btn-danger">DELETE</a></td>
-
+            <td><a class="btn btn-primary btn-sm"
+                   th:href="@{deleteBook(title=${book.title})}">Delete</a></td>
         </tr>
     </tbody>
 </table>

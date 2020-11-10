@@ -5,8 +5,8 @@ import com.cifojava.libraryexercise.Model.Book;
 import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.transaction.Transactional;
 
 @Service
 @Transactional
@@ -25,8 +25,5 @@ public class BookService {
 
     public void deleteBookByTitle(String title){
         bookRepository.deleteBookByTitle(title);
-    }
-    public void deleteBook(Book book){
-        bookRepository.delete(book);
     }
 }
