@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="/webjars/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
     <script src="/webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <style>
-        table , form {
-            margin:20px;
-        }
-
-    </style>
     <title></title>
 </head>
 <h5> Library</h5>
@@ -23,6 +17,7 @@
         <th scope="col">Title</th>
         <th scope="col">ISBN</th>
         <th scope="col">Pages</th>
+        <th scope="col">Author</th>
         <th scope="col">Option</th>
 
     </tr>
@@ -32,6 +27,7 @@
             <td th:text="${book.title}"></td>
             <td th:text="${book.ISBN}"></td>
             <td th:text="${book.pages}"></td>
+            <td th:text="${book.author}"></td>
             <td><a class="btn btn-primary btn-sm"
                    th:href="@{deleteBook(title=${book.title})}">Delete</a></td>
         </tr>
