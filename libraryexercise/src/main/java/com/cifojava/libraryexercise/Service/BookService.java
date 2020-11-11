@@ -1,6 +1,7 @@
 package com.cifojava.libraryexercise.Service;
 
 
+import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Model.Book;
 import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,9 @@ public class BookService {
 
     public void deleteBookByTitle(String title){
         bookRepository.deleteBookByTitle(title);
+    }
+
+    public void assignAuthorToBook(Book book, Author author){
+
     }
 }

@@ -1,5 +1,6 @@
 package com.cifojava.libraryexercise.Controller;
 
+import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +16,7 @@ public class AuthorController {
 
     @RequestMapping("/authors")
     public String showAuthors(Model model){
-        model.addAttribute("listOfauthors", authorService.findAllAuthors());
+        model.addAttribute("listOfAuthors", authorService.findAllAuthors());
         return "/webapp/Authors/indexAuthors";
     }
 
@@ -23,6 +24,14 @@ public class AuthorController {
     public String newAuthor(){
         return "webapp/Authors/newAuthor";
     }
+
+    @RequestMapping("/insertAuthor")
+    public String insertAuthor(Model model, Author author){
+        authorService.insertAuthor(author);
+        return showAuthors(model);
+    }
+
+
 
 
 

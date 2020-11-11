@@ -12,17 +12,22 @@ import javax.persistence.*;
 public class Book {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String title;
     private String ISBN;
     private int pages;
 
-    public Book(String title, String ISBN, int pages) {
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @JoinColumn(name = "author_id", nullable = false)
+    private Author author;
+
+    public Book(String title, String ISBN, int pages, Author author) {
         this.title = title;
         this.ISBN = ISBN;
         this.pages = pages;
+        this.author= author;
     }
 
     public Book(String title){
