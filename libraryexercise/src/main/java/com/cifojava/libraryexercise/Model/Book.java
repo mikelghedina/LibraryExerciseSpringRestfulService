@@ -1,13 +1,12 @@
 package com.cifojava.libraryexercise.Model;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
 
+@Data
 @Entity
 @Table(name = "BOOKS")
 @Getter @Setter @NoArgsConstructor @ToString
@@ -51,5 +50,6 @@ public class Book {
     public int hashCode() {
         return Objects.hash(this.id, this.title, this.ISBN,this.pages, this.author);
     }
+
 
 }
