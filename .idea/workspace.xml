@@ -23,16 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b56cc7ed-7efa-4f2e-ad30-b69d9510f0a6" name="Default Changelist" comment="Class updates to project.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/BookRestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Controller/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Quote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +48,11 @@
     <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
@@ -153,7 +151,7 @@
       <workItem from="1605040405715" duration="932000" />
       <workItem from="1605045258137" duration="4215000" />
       <workItem from="1605050981293" duration="418000" />
-      <workItem from="1605170496705" duration="4009000" />
+      <workItem from="1605170496705" duration="4370000" />
     </task>
     <task id="LOCAL-00001" summary="Class updates to project.">
       <created>1604923187928</created>
@@ -218,7 +216,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605174088484</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Class updates to project.">
+      <created>1605176631122</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605176631122</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,11 +379,11 @@
     </state>
     <state x="360" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605050635819" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1605097246658" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605174093024">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1605176686832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605045296619" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605174093024" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605176686832" />
     <state x="640" y="257" key="cloudConfig.SelfSettingsDialog" timestamp="1605036448624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
