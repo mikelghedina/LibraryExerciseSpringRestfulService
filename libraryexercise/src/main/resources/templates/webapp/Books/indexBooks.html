@@ -27,7 +27,7 @@
             <td th:text="${book.title}"></td>
             <td th:text="${book.ISBN}"></td>
             <td th:text="${book.pages}"></td>
-            <td th:text="${book.author}"></td>
+            <td th:text="${book.author.name}"></td>
             <td><a class="btn btn-primary btn-sm"
                    th:href="@{deleteBook(title=${book.title})}">Delete</a></td>
         </tr>

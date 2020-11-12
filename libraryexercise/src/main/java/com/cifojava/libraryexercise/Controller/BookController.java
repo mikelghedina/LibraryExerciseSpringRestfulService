@@ -2,6 +2,7 @@ package com.cifojava.libraryexercise.Controller;
 
 
 
+
 import com.cifojava.libraryexercise.Model.Book;
 import com.cifojava.libraryexercise.Service.AuthorService;
 import com.cifojava.libraryexercise.Service.BookService;
@@ -39,7 +40,6 @@ public class BookController {
         bookService.insertBook(book);
 
         model.addAttribute("listOfBooks", bookService.findAllBooks());
-
 
         return "webapp/Books/indexBooks";
     }
