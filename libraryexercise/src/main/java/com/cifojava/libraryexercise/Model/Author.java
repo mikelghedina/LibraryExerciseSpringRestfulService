@@ -4,19 +4,20 @@ package com.cifojava.libraryexercise.Model;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
 @Table(name = "AUTHORS")
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor @ToString
 public class Author {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
-
+    @GeneratedValue
+    private Long id;
 
     //private String fullName;
 
@@ -32,6 +33,23 @@ public class Author {
         this.lastName = lastName;
         //this.fullName = name+ " " + lastName;
 
+    }
+
+    @Override
+    public boolean equals(Object o) {
+
+        if (this == o)
+            return true;
+        if (!(o instanceof Author))
+            return false;
+        Author author = (Author) o;
+        return Objects.equals(this.id, author.id) && Objects.equals(this.name, author.name)
+                && Objects.equals(this.lastName, author.lastName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id, this.name, this.lastName);
     }
 
     //@OneToMany(mappedBy = "Author", cascade = CascadeType.ALL)

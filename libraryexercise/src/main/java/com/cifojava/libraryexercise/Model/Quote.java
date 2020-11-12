@@ -12,7 +12,7 @@ public class Quote {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     private String quote;
 
@@ -21,8 +21,7 @@ public class Quote {
     //private Author author;
 
 
-    public Quote(int id, String quote) {
-        this.id = id;
+    public Quote(String quote) {
         this.quote = quote;
     }
 }
