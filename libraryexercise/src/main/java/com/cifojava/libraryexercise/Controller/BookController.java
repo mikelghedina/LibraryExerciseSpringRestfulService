@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-@RequestMapping("/library")
+@RequestMapping//("/library")
 public class BookController {
 
     @Autowired

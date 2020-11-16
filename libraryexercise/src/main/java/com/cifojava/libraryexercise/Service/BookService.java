@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -22,8 +22,16 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public void insertBook(Book book){
+    public Book insertBook(Book book){
         bookRepository.save(book);
+        return book;
+    }
+    public Optional<Book> showOneBookById(Long id){
+        return bookRepository.findById(id);
+    }
+
+    public void deleteBookById(Long id){
+        bookRepository.deleteById(id);
     }
 
     public void deleteBookByTitle(String title){

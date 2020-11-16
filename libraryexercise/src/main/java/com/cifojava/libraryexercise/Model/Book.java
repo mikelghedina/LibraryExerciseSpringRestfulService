@@ -1,6 +1,8 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.persistence.*;
@@ -24,11 +26,10 @@ public class Book {
     @JoinColumn(name = "author_id", nullable = false)
     private Author author;
 
-    public Book(String title, String ISBN, int pages, Author author) {
+    public Book(String title, String ISBN, int pages) {
         this.title = title;
         this.ISBN = ISBN;
         this.pages = pages;
-        this.author= author;
     }
 
     public Book(String title){

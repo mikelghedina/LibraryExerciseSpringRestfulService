@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/library")
+@RequestMapping//("/library")
 public class AuthorController {
 
     @Autowired
