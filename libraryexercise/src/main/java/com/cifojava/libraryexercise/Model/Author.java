@@ -8,8 +8,8 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
 
 @Data
@@ -25,11 +25,16 @@ public class Author {
     //private String fullName;
 
     private String name;
+
     private String lastName;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
-    private Set<Book> books;
+    private List<Book> books;
+
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private List<Quote> quotes;
 
     public Author(String name, String lastName) {
         this.name = name;

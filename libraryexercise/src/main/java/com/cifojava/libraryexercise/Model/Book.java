@@ -18,18 +18,22 @@ public class Book {
     @GeneratedValue
     private Long id;
 
+
     private String title;
+
     private String ISBN;
+
     private int pages;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "author_id", nullable = false)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
     private Author author;
 
-    public Book(String title, String ISBN, int pages) {
+    public Book(String title, String ISBN, int pages, Author author) {
         this.title = title;
         this.ISBN = ISBN;
         this.pages = pages;
+        this.author = author;
     }
 
     public Book(String title){

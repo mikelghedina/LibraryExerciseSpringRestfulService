@@ -1,12 +1,15 @@
 package com.cifojava.libraryexercise.Model;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
+@Data
 @Entity
+@Table(name = "QUOTES")
 @Getter @Setter @NoArgsConstructor
 public class Quote {
 
@@ -14,14 +17,14 @@ public class Quote {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String quote;
+    private String content;
 
-    //@ManyToOne
-    //@JoinColumn(name = "Author_ID")
-    //private Author author;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    private Author author;
 
 
-    public Quote(String quote) {
-        this.quote = quote;
+    public Quote(String content) {
+        this.content = content;
     }
 }

@@ -6,6 +6,8 @@ import com.cifojava.libraryexercise.Repository.QuoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class QuoteService {
 
@@ -16,13 +18,17 @@ public class QuoteService {
     public Iterable<Quote> showQuotes(){
         return quoteRepository.findAll();
     }
-
-    public void insertQuote(Quote quote){
-        quoteRepository.save(quote);
+    public Optional<Quote> findOneQuoteById(Long id){
+        return quoteRepository.findById(id);
     }
 
-    public void deleteQuote(Quote quote){
-        quoteRepository.delete(quote);
+    public Quote insertQuote(Quote quote){
+        quoteRepository.save(quote);
+        return quote;
+    }
+
+    public void deleteQuoteById(Long id){
+        quoteRepository.deleteById(id);
     }
 
 }

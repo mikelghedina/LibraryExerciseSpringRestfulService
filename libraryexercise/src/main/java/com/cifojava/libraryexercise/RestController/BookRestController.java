@@ -31,7 +31,7 @@ public class BookRestController {
         return bookService.showOneBookById(id);
     }
 
-    @PutMapping("/books/{id}")
+    @PutMapping("/books{id}")
     public Book replaceBook(@RequestBody Book newBook, @PathVariable Long id){
         return bookService.showOneBookById(id)
                 .map(book -> {
@@ -44,7 +44,7 @@ public class BookRestController {
                     return bookService.insertBook(newBook);
                 });
     }
-    @DeleteMapping("/books/{id}")
+    @DeleteMapping("/books{id}")
     public void deleteBookById(@PathVariable Long id){
         bookService.deleteBookById(id);
     }
