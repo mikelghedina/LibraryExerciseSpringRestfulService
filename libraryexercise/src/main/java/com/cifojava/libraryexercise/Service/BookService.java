@@ -31,14 +31,14 @@ public class BookService {
     }
 
     public void deleteBookById(Long id){
-        bookRepository.deleteById(id);
+        bookRepository.deleteBookById(id);
     }
 
     public void deleteBookByTitle(String title){
         bookRepository.deleteBookByTitle(title);
     }
 
-    public void assignAuthorToBook(Book book, Author author){
+    /*public void assignAuthorToBook(Book book, Author author){
 
-    }
+    }*/
 }

@@ -44,11 +44,12 @@ public class BookRestController {
                     return bookService.insertBook(newBook);
                 });
     }
-
     @DeleteMapping("/books/{id}")
-    public void deleteBook(@PathVariable Long id){
+    public void deleteBookById(@PathVariable Long id){
         bookService.deleteBookById(id);
     }
+
+
 
 
 
