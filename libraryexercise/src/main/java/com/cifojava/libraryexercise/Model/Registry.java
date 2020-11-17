@@ -5,7 +5,6 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Objects;
 
 @Entity
 @Data
@@ -17,30 +16,18 @@ public class Registry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
-    private User user;
+    @OneToMany(mappedBy = "Registry", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private List<User> users;
 
-    @OneToMany(mappedBy = "Registry", cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "Registry", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     private List<Book> books ;
 
-    public Registry(User user, List<Book> books) {
-        this.user = user;
+    public Registry(List<User> users, List<Book> books) {
+        this.users = users;
         this.books = books;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Registry registry = (Registry) o;
-        return Objects.equals(id, registry.id) &&
-                Objects.equals(user, registry.user) &&
-                Objects.equals(books, registry.books);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, user, books);
-    }
 }

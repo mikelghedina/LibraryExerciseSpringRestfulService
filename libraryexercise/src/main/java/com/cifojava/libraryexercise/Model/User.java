@@ -22,8 +22,9 @@ public class User {
     private String password;
     private int age;
 
-    @OneToMany(mappedBy = "User", cascade = CascadeType.ALL)
-    private List<Registry> registry;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "registry_id")
+    private User user;
 
     public User(String username, String password, int age) {
         this.username = username;
