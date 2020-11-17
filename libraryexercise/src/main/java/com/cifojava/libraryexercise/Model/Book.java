@@ -13,14 +13,11 @@ import java.util.Objects;
 public class Book {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     private String title;
-
     private String ISBN;
-
     private int pages;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)

@@ -14,21 +14,25 @@ import java.util.Objects;
 public class Registry {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private User user;
 
-
     @OneToMany(mappedBy = "registry", fetch = FetchType.LAZY,
             cascade = CascadeType.ALL)
     private List<Book> books ;
 
-    public Registry(User user, List<Book> books) {
+    @OneToOne(mappedBy = "registry", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+    private Date date;
+
+    public Registry(User user, List<Book> books, Date date) {
         this.user = user;
         this.books = books;
+        this.date = date;
     }
 
     @Override
