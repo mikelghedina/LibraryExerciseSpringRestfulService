@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Data
 @Entity
@@ -23,8 +24,22 @@ public class Quote {
     @JoinColumn(name = "author_id")
     private Author author;
 
-
     public Quote(String content) {
         this.content = content;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Quote quote = (Quote) o;
+        return Objects.equals(id, quote.id) &&
+                Objects.equals(content, quote.content) &&
+                Objects.equals(author, quote.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, content, author);
     }
 }

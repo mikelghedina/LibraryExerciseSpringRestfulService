@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table (name = "USERS")
@@ -20,9 +22,8 @@ public class User {
     private String password;
     private int age;
 
-    //@ManyToOne
-    //@JoinColumn(name = "AUTHOR_ID")
-    //private Author author;
+    @OneToMany(mappedBy = "User", cascade = CascadeType.ALL)
+    private List<Registry> registry;
 
     public User(String username, String password, int age) {
         this.username = username;
@@ -30,4 +31,19 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        User user = (User) o;
+        return age == user.age &&
+                Objects.equals(id, user.id) &&
+                Objects.equals(username, user.username) &&
+                Objects.equals(password, user.password);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, username, password, age);
+    }
 }

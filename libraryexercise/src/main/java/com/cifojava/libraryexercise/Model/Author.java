@@ -60,10 +60,5 @@ public class Author {
         return Objects.hash(this.id, this.name, this.lastName);
     }
 
-    //@OneToMany(mappedBy = "Author", cascade = CascadeType.ALL)
-    //private List<Book> books = new ArrayList<Book>();
-
-    //@OneToMany(mappedBy = "Author", cascade = CascadeType.ALL)
-    //private List<Quote> quotes = new ArrayList<Quote>();
 
 }
