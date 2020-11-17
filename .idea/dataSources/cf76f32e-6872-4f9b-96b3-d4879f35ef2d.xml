@@ -176,38 +176,38 @@
     <collation id="161" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="162" parent="2" name="VIETNAMESE"/>
     <collation id="163" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_3C655D8B_9FD9_4B90_8F69_71CF286843D1">
-      <ObjectId>16</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_52AF42B6_CBB6_4AFB_9C50_321C8E024136">
-      <ObjectId>24</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_63A9BEBD_6CC4_4ABA_A08D_4FF856CFEF07">
-      <ObjectId>12</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_C93041DE_0615_4F09_8CFC_051DE8263307">
-      <ObjectId>20</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_E52ABD68_396A_44BF_8D84_0E3750FBD181">
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_3A06D1F1_3FE0_435F_ABD6_1C9161B22DEB">
       <ObjectId>4</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="169" parent="4" name="SYSTEM_SEQUENCE_FD4D678E_241C_4EB8_90EF_A6B3831B4182">
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_6D4C81D4_CA28_42F7_8787_8122791250B3">
+      <ObjectId>24</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_74E2C0C3_7BB3_43FD_BDDD_3C697E638A4D">
       <ObjectId>8</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_8EC17A6F_0133_45FE_8C01_9575A25A3E93">
+      <ObjectId>20</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_B7DFFB69_2598_4A38_A42D_75ECE561BB04">
+      <ObjectId>12</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="169" parent="4" name="SYSTEM_SEQUENCE_E5F514E8_274E_4636_AF89_9D59651900E1">
+      <ObjectId>16</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
