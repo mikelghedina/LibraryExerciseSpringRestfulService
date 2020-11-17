@@ -176,14 +176,14 @@
     <collation id="161" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="162" parent="2" name="VIETNAMESE"/>
     <collation id="163" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_06AC9C28_5649_400F_A65E_41315A480085">
-      <ObjectId>15</ObjectId>
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_3C41B6E6_DCB3_4D8E_B156_1B40DB0B491A">
+      <ObjectId>11</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_5186A53E_026B_43CF_ABDB_EC1DC644C170">
-      <ObjectId>11</ObjectId>
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_66420E16_6204_491E_B48B_15E8B97A4A80">
+      <ObjectId>15</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
@@ -250,7 +250,6 @@
     <column id="180" parent="167" name="AUTHOR_ID">
       <Position>5</Position>
       <DataType>BIGINT|0s</DataType>
-      <NotNull>1</NotNull>
     </column>
     <index id="181" parent="167" name="PRIMARY_KEY_3">
       <ObjectId>7</ObjectId>

@@ -31,11 +31,10 @@ public class Book {
     @JoinColumn(name = "registry_id")
     private Registry registry;
 
-    public Book(String title, String ISBN, int pages, Author author) {
+    public Book(String title, String ISBN, int pages) {
         this.title = title;
         this.ISBN = ISBN;
         this.pages = pages;
-        this.author = author;
     }
 
     public Book(String title){

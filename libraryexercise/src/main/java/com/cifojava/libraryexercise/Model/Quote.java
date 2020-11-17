@@ -1,9 +1,6 @@
 package com.cifojava.libraryexercise.Model;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -11,7 +8,7 @@ import java.util.Objects;
 @Data
 @Entity
 @Table(name = "QUOTES")
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor @ToString
 public class Quote {
 
     @Id

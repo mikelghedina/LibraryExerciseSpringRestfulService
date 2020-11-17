@@ -40,7 +40,6 @@ public class Author {
         this.name = name;
         this.lastName = lastName;
         //this.fullName = name+ " " + lastName;
-
     }
 
     @Override
