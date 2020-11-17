@@ -1,7 +1,5 @@
 package com.cifojava.libraryexercise.Service;
 
-
-import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Model.Book;
 import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;

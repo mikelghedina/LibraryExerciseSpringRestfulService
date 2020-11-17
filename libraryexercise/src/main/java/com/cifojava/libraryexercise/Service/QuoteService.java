@@ -13,7 +13,7 @@ public class QuoteService {
 
 
     @Autowired
-    QuoteRepository quoteRepository;
+    private QuoteRepository quoteRepository;
 
     public Iterable<Quote> showQuotes(){
         return quoteRepository.findAll();

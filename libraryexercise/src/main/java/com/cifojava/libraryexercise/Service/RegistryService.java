@@ -12,7 +12,7 @@ import java.util.Optional;
 public class RegistryService {
 
     @Autowired
-    RegistryRepository registryRepository;
+    private RegistryRepository registryRepository;
 
 
     public Iterable<Registry> showRegistry(){
