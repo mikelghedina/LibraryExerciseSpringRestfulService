@@ -5,6 +5,8 @@ import com.cifojava.libraryexercise.Repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 public class AuthorService {
 
@@ -15,12 +17,17 @@ public class AuthorService {
         return authorRepository.findAll();
     }
 
-    public void insertAuthor(Author author){
-        authorRepository.save(author);
+    public Optional<Author> findOneAuthorById(Long id){
+        return authorRepository.findById(id);
     }
 
-    public void deleteAuthor(Author author){
-        authorRepository.delete(author);
+    public Author insertAuthor(Author author){
+        authorRepository.save(author);
+        return author;
+    }
+
+    public void deleteAuthorById(Long id){
+        authorRepository.deleteById(id);
     }
 
 }

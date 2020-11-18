@@ -2,7 +2,11 @@ package com.cifojava.libraryexercise.Repository;
 
 import com.cifojava.libraryexercise.Model.Quote;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface QuoteRepository extends CrudRepository<Quote, String> {
+@Repository
+public interface QuoteRepository extends CrudRepository<Quote, Long> {
+
+    void deleteById(Long id);
 
 }

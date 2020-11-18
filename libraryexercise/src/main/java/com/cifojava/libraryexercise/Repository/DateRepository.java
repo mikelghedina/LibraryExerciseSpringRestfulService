@@ -1,9 +1,10 @@
 package com.cifojava.libraryexercise.Repository;
 
-import com.cifojava.libraryexercise.Model.User;
+import com.cifojava.libraryexercise.Model.Date;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+
 @Repository
-public interface UserRepository extends CrudRepository<User, Long> {
+public interface DateRepository extends CrudRepository<Date, Long> {
 }

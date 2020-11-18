@@ -2,8 +2,9 @@ package com.cifojava.libraryexercise.Repository;
 
 import com.cifojava.libraryexercise.Model.Author;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
 
-public interface AuthorRepository extends CrudRepository<Author, String> {
-
+@Repository
+public interface AuthorRepository extends CrudRepository<Author, Long> {
 
 }
