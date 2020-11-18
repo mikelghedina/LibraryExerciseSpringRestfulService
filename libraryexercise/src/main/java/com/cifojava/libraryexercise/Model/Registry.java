@@ -14,7 +14,7 @@ import java.util.Objects;
 public class Registry {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
@@ -29,11 +29,7 @@ public class Registry {
             cascade = CascadeType.ALL)
     private Date date;
 
-    public Registry(User user, List<Book> books, Date date) {
-        this.user = user;
-        this.books = books;
-        this.date = date;
-    }
+
 
     @Override
     public boolean equals(Object o) {

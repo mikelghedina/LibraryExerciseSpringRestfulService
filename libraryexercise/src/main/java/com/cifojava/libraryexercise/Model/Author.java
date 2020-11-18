@@ -19,7 +19,7 @@ import java.util.Objects;
 public class Author {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     //private String fullName;
@@ -28,8 +28,8 @@ public class Author {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
+    @ManyToMany(mappedBy = "author"/*, fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL*/)
     private List<Book> books;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
