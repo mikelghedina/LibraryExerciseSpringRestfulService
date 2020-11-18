@@ -1,6 +1,7 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -22,6 +23,7 @@ public class Date {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "registry_id")
+    @JsonIgnore
     private Registry registry;
 
     public Date(int day, int month, int year) {

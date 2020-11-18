@@ -28,8 +28,8 @@ public class Author {
 
     private String lastName;
 
-    @ManyToMany(mappedBy = "author"/*, fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL*/)
+    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
     private List<Book> books;
 
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
