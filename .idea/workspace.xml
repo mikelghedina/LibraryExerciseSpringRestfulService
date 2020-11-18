@@ -22,7 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b56cc7ed-7efa-4f2e-ad30-b69d9510f0a6" name="Default Changelist" comment="Class updates to project." />
+    <list default="true" id="b56cc7ed-7efa-4f2e-ad30-b69d9510f0a6" name="Default Changelist" comment="Class updates to project.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/resources/templates/webapp/Books/indexBooks.html" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/resources/templates/webapp/Books/indexBooks.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +134,8 @@
       <workItem from="1605040405715" duration="932000" />
       <workItem from="1605045258137" duration="4215000" />
       <workItem from="1605050981293" duration="591000" />
+      <workItem from="1605123516552" duration="1331000" />
+      <workItem from="1605380143454" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="Class updates to project.">
       <created>1604923187928</created>
@@ -188,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605051552299</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Class updates to project.">
+      <created>1605123547541</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1605123547541</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -330,6 +342,14 @@
     </state>
     <state width="1493" height="261" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1605040394014" />
     <state width="1877" height="348" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1605010104765" />
+    <state x="147" y="65" key="MergeDialog" timestamp="1605123588504">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="MergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605123588504" />
+    <state x="407" y="174" key="MultipleFileMergeDialog" timestamp="1605123614245">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="407" y="174" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1605123614245" />
     <state x="550" y="117" key="NewModule_or_Project.wizard" timestamp="1605036477200">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
