@@ -247,11 +247,15 @@
       <Position>4</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <column id="182" parent="165" name="REGISTRY_ID">
+    <column id="182" parent="165" name="AUTHOR_ID">
       <Position>5</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="183" parent="165" name="PRIMARY_KEY_3">
+    <column id="183" parent="165" name="REGISTRY_ID">
+      <Position>6</Position>
+      <DataType>BIGINT|0s</DataType>
+    </column>
+    <index id="184" parent="165" name="PRIMARY_KEY_3">
       <ObjectId>8</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>69</SourceTextLength>
@@ -259,59 +263,26 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="184" parent="165" name="FKFJN66INTD8SYSXNSJ6MQVFMMR_INDEX_3">
-      <ObjectId>30</ObjectId>
+    <index id="185" parent="165" name="FKFJIXH2VYM2CVFJ3UFXJ91JEM7_INDEX_3">
+      <ObjectId>26</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <SourceTextLength>92</SourceTextLength>
+      <ColNames>AUTHOR_ID</ColNames>
+      <AutoCreated>1</AutoCreated>
+    </index>
+    <index id="186" parent="165" name="FKFJN66INTD8SYSXNSJ6MQVFMMR_INDEX_3">
+      <ObjectId>28</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>94</SourceTextLength>
       <ColNames>REGISTRY_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="185" parent="165" name="CONSTRAINT_3">
+    <key id="187" parent="165" name="CONSTRAINT_3">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="186" parent="165" name="FKFJN66INTD8SYSXNSJ6MQVFMMR">
-      <ColNames>REGISTRY_ID</ColNames>
-      <RefTableName>REGISTRY</RefTableName>
-      <RefKeyName>PRIMARY_KEY_5</RefKeyName>
-      <RefColNames>ID</RefColNames>
-      <OnDelete>restrict</OnDelete>
-      <OnUpdate>restrict</OnUpdate>
-    </foreign-key>
-    <column id="187" parent="166" name="BOOK_ID">
-      <Position>1</Position>
-      <DataType>BIGINT|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="188" parent="166" name="AUTHOR_ID">
-      <Position>2</Position>
-      <DataType>BIGINT|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <index id="189" parent="166" name="FK91IERKNT446AAQNJL4UXJYLS3_INDEX_A">
-      <ObjectId>28</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>96</SourceTextLength>
-      <ColNames>BOOK_ID</ColNames>
-      <AutoCreated>1</AutoCreated>
-    </index>
-    <index id="190" parent="166" name="FKRO54JQPTH9CQM1899DNUU9LQG_INDEX_A">
-      <ObjectId>26</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>98</SourceTextLength>
-      <ColNames>AUTHOR_ID</ColNames>
-      <AutoCreated>1</AutoCreated>
-    </index>
-    <foreign-key id="191" parent="166" name="FK91IERKNT446AAQNJL4UXJYLS3">
-      <ColNames>BOOK_ID</ColNames>
-      <RefTableName>BOOKS</RefTableName>
-      <RefKeyName>PRIMARY_KEY_3</RefKeyName>
-      <RefColNames>ID</RefColNames>
-      <OnDelete>restrict</OnDelete>
-      <OnUpdate>restrict</OnUpdate>
-    </foreign-key>
-    <foreign-key id="192" parent="166" name="FKRO54JQPTH9CQM1899DNUU9LQG">
+    <foreign-key id="188" parent="165" name="FKFJIXH2VYM2CVFJ3UFXJ91JEM7">
       <ColNames>AUTHOR_ID</ColNames>
       <RefTableName>AUTHORS</RefTableName>
       <RefKeyName>PRIMARY_KEY_4</RefKeyName>
@@ -319,31 +290,49 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="193" parent="167" name="ID">
+    <foreign-key id="189" parent="165" name="FKFJN66INTD8SYSXNSJ6MQVFMMR">
+      <ColNames>REGISTRY_ID</ColNames>
+      <RefTableName>REGISTRY</RefTableName>
+      <RefKeyName>PRIMARY_KEY_5</RefKeyName>
+      <RefColNames>ID</RefColNames>
+      <OnDelete>restrict</OnDelete>
+      <OnUpdate>restrict</OnUpdate>
+    </foreign-key>
+    <column id="190" parent="166" name="BOOK_ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="194" parent="167" name="DAY">
+    <column id="191" parent="166" name="AUTHOR_ID">
+      <Position>2</Position>
+      <DataType>BIGINT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="192" parent="167" name="ID">
+      <Position>1</Position>
+      <DataType>BIGINT|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="193" parent="167" name="DAY">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="195" parent="167" name="MONTH">
+    <column id="194" parent="167" name="MONTH">
       <Position>3</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="196" parent="167" name="YEAR">
+    <column id="195" parent="167" name="YEAR">
       <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="197" parent="167" name="REGISTRY_ID">
+    <column id="196" parent="167" name="REGISTRY_ID">
       <Position>5</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="198" parent="167" name="PRIMARY_KEY_1">
+    <index id="197" parent="167" name="PRIMARY_KEY_1">
       <ObjectId>11</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>68</SourceTextLength>
@@ -351,19 +340,19 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="199" parent="167" name="FKAJRYKP9HB40V5W7B0TOS15SOE_INDEX_1">
-      <ObjectId>32</ObjectId>
+    <index id="198" parent="167" name="FKAJRYKP9HB40V5W7B0TOS15SOE_INDEX_1">
+      <ObjectId>30</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>REGISTRY_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="200" parent="167" name="CONSTRAINT_1">
+    <key id="199" parent="167" name="CONSTRAINT_1">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="201" parent="167" name="FKAJRYKP9HB40V5W7B0TOS15SOE">
+    <foreign-key id="200" parent="167" name="FKAJRYKP9HB40V5W7B0TOS15SOE">
       <ColNames>REGISTRY_ID</ColNames>
       <RefTableName>REGISTRY</RefTableName>
       <RefKeyName>PRIMARY_KEY_5</RefKeyName>
@@ -371,24 +360,24 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="202" parent="168" name="NEXT_VAL">
+    <column id="201" parent="168" name="NEXT_VAL">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <column id="203" parent="169" name="ID">
+    <column id="202" parent="169" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="204" parent="169" name="CONTENT">
+    <column id="203" parent="169" name="CONTENT">
       <Position>2</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <column id="205" parent="169" name="AUTHOR_ID">
+    <column id="204" parent="169" name="AUTHOR_ID">
       <Position>3</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="206" parent="169" name="PRIMARY_KEY_8">
+    <index id="205" parent="169" name="PRIMARY_KEY_8">
       <ObjectId>15</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
@@ -396,19 +385,19 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="207" parent="169" name="FKSI54DKY8VTDMINFHDM3IICPEP_INDEX_8">
-      <ObjectId>34</ObjectId>
+    <index id="206" parent="169" name="FKSI54DKY8VTDMINFHDM3IICPEP_INDEX_8">
+      <ObjectId>32</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>AUTHOR_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="208" parent="169" name="CONSTRAINT_8">
+    <key id="207" parent="169" name="CONSTRAINT_8">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="209" parent="169" name="FKSI54DKY8VTDMINFHDM3IICPEP">
+    <foreign-key id="208" parent="169" name="FKSI54DKY8VTDMINFHDM3IICPEP">
       <ColNames>AUTHOR_ID</ColNames>
       <RefTableName>AUTHORS</RefTableName>
       <RefKeyName>PRIMARY_KEY_4</RefKeyName>
@@ -416,16 +405,16 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="210" parent="170" name="ID">
+    <column id="209" parent="170" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="211" parent="170" name="USER_ID">
+    <column id="210" parent="170" name="USER_ID">
       <Position>2</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <index id="212" parent="170" name="PRIMARY_KEY_5">
+    <index id="211" parent="170" name="PRIMARY_KEY_5">
       <ObjectId>18</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>72</SourceTextLength>
@@ -433,19 +422,19 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="213" parent="170" name="FK4BSKB4QL8PS99SW7N2MGHDQ21_INDEX_5">
-      <ObjectId>36</ObjectId>
+    <index id="212" parent="170" name="FK4BSKB4QL8PS99SW7N2MGHDQ21_INDEX_5">
+      <ObjectId>34</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>USER_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="214" parent="170" name="CONSTRAINT_5">
+    <key id="213" parent="170" name="CONSTRAINT_5">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="215" parent="170" name="FK4BSKB4QL8PS99SW7N2MGHDQ21">
+    <foreign-key id="214" parent="170" name="FK4BSKB4QL8PS99SW7N2MGHDQ21">
       <ColNames>USER_ID</ColNames>
       <RefTableName>USERS</RefTableName>
       <RefKeyName>PRIMARY_KEY_4D</RefKeyName>
@@ -453,25 +442,25 @@
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
     </foreign-key>
-    <column id="216" parent="171" name="ID">
+    <column id="215" parent="171" name="ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="217" parent="171" name="AGE">
+    <column id="216" parent="171" name="AGE">
       <Position>2</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="218" parent="171" name="PASSWORD">
+    <column id="217" parent="171" name="PASSWORD">
       <Position>3</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <column id="219" parent="171" name="USERNAME">
+    <column id="218" parent="171" name="USERNAME">
       <Position>4</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <index id="220" parent="171" name="PRIMARY_KEY_4D">
+    <index id="219" parent="171" name="PRIMARY_KEY_4D">
       <ObjectId>21</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
@@ -479,22 +468,22 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="221" parent="171" name="CONSTRAINT_4D">
+    <key id="220" parent="171" name="CONSTRAINT_4D">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="222" parent="172" name="USER_ID">
+    <column id="221" parent="172" name="USER_ID">
       <Position>1</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="223" parent="172" name="REGISTRIES_ID">
+    <column id="222" parent="172" name="REGISTRIES_ID">
       <Position>2</Position>
       <DataType>BIGINT|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="224" parent="172" name="UK_6XONUDJP2ACYSUVRKG0V9X7K8_INDEX_B">
+    <index id="223" parent="172" name="UK_6XONUDJP2ACYSUVRKG0V9X7K8_INDEX_B">
       <ObjectId>23</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>115</SourceTextLength>
@@ -502,7 +491,7 @@
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <key id="225" parent="172" name="UK_6XONUDJP2ACYSUVRKG0V9X7K8">
+    <key id="224" parent="172" name="UK_6XONUDJP2ACYSUVRKG0V9X7K8">
       <ColNames>REGISTRIES_ID</ColNames>
     </key>
   </database-model>
