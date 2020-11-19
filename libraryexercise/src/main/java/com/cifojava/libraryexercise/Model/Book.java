@@ -1,6 +1,7 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,15 +22,14 @@ public class Book {
     private String ISBN;
     private int pages;
 
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "book_author",
-            joinColumns = @JoinColumn(name = "book_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "author_id",
-                    referencedColumnName = "id"))
-    private List<Author> author;
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
+    @JsonIgnore
+    private Author author;
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "registry_id")
+    @JsonIgnore
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {

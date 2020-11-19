@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")
 public class RegistryRestController {
 
@@ -19,7 +20,7 @@ public class RegistryRestController {
         return registryService.showRegistry();
     }
     @GetMapping("/registries{id}")
-    public Optional<Registry> showOneRegistryById(Long id){
+    public Optional<Registry> showOneRegistryById(@PathVariable Long id){
         return registryService.findOneRegistryById(id);
     }
     @PostMapping("/registries")

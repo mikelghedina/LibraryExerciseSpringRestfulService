@@ -1,5 +1,6 @@
 package com.cifojava.libraryexercise.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +20,7 @@ public class Quote {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
+    @JsonIgnore
     private Author author;
 
     public Quote(String content) {
