@@ -1,7 +1,9 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,6 +13,9 @@ import java.util.Objects;
 @Entity
 @Table(name="DATE")
 @Getter @Setter @NoArgsConstructor @ToString
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Date {
 
     @Id
@@ -23,7 +28,6 @@ public class Date {
 
     @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "registry_id")
-    @JsonIgnore
     private Registry registry;
 
     public Date(int day, int month, int year) {

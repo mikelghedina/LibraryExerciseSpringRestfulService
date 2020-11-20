@@ -2,6 +2,9 @@ package com.cifojava.libraryexercise.Model;
 
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -17,6 +20,9 @@ import java.util.Objects;
 @Entity
 @Table(name = "AUTHORS")
 @Getter @Setter @NoArgsConstructor @ToString
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Author {
 
     @Id
