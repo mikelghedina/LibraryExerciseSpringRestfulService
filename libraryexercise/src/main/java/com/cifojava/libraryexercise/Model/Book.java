@@ -5,13 +5,14 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
-@Data
+
 @Entity
 @Table(name = "BOOKS")
-@Getter @Setter @NoArgsConstructor @ToString
+@Getter @Setter @NoArgsConstructor
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
@@ -44,6 +45,17 @@ public class Book {
     }
 
     @Override
+    public String toString() {
+        return "Book{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", ISBN='" + ISBN + '\'' +
+                ", pages=" + pages /*+
+                ", registry=" + registry +
+                '}'*/;
+    }
+
+    @Override
     public boolean equals(Object o) {
 
         if (this == o)
@@ -54,10 +66,10 @@ public class Book {
         return Objects.equals(this.id, book.id) && Objects.equals(this.title, book.title)
                 && Objects.equals(this.ISBN, book.ISBN);
     }
-    @Override
+    /*@Override
     public int hashCode() {
         return Objects.hash(this.id, this.title, this.ISBN,this.pages, this.author);
     }
-
+*/
 
 }

@@ -26,7 +26,6 @@ public class Quote {
 
     @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     private Author author;
 
     public Quote(String content) {
