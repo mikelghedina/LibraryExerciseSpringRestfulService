@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "BOOKS")
-@Getter @Setter @NoArgsConstructor
+@Getter @Setter @NoArgsConstructor @ToString
 @JsonIdentityInfo(
         generator = ObjectIdGenerators.PropertyGenerator.class,
         property = "id")
@@ -26,12 +26,14 @@ public class Book {
     private String ISBN;
     private int pages;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
+    @JsonManagedReference
     private Author author;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "registry_id")
+    @JsonBackReference
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {
@@ -44,16 +46,6 @@ public class Book {
         this.title = title;
     }
 
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", ISBN='" + ISBN + '\'' +
-                ", pages=" + pages /*+
-                ", registry=" + registry +
-                '}'*/;
-    }
 
     @Override
     public boolean equals(Object o) {

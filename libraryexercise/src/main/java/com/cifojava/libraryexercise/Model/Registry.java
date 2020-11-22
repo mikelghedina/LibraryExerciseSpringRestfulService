@@ -1,40 +1,35 @@
 package com.cifojava.libraryexercise.Model;
 
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
 import java.util.List;
 import java.util.Objects;
 
-@Data
+
 @Table(name = "REGISTRY")
 @Getter @Setter @NoArgsConstructor @ToString
 @Entity
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
 public class Registry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User user;
 
-    @OneToMany(mappedBy = "registry", fetch = FetchType.LAZY,
-            cascade = CascadeType.ALL)
-    @JsonBackReference
+    @OneToMany(mappedBy = "registry",cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Book> books ;
 
-    @OneToOne(mappedBy = "registry", fetch = FetchType.LAZY,
+    @OneToOne(mappedBy = "registry",
             cascade = CascadeType.ALL)
+    @JsonManagedReference
     private Date date;
 
 

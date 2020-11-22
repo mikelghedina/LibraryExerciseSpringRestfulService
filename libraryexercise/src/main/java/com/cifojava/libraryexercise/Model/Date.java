@@ -1,6 +1,7 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
@@ -26,8 +27,9 @@ public class Date {
     private int month;
     private int year;
 
-    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "registry_id")
+    @JsonBackReference
     private Registry registry;
 
     public Date(int day, int month, int year) {

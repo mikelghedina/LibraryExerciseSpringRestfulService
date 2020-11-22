@@ -1,28 +1,20 @@
 package com.cifojava.libraryexercise.Model;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 
-
 @Entity
 @Table(name = "AUTHORS")
-@Getter @Setter @NoArgsConstructor
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
-        property = "id")
+@Getter @Setter @NoArgsConstructor @ToString
 public class Author {
 
     @Id
@@ -35,12 +27,14 @@ public class Author {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Book> books = new ArrayList<Book>();
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {
@@ -49,16 +43,7 @@ public class Author {
         //this.fullName = name+ " " + lastName;
     }
 
-    @Override
-    public String toString() {
-        return "Author{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", lastName='" + lastName + '\'' /*+
-                ", books=" + books +
-                ", quotes=" + quotes +
-                '}'*/;
-    }
+
 
     @Override
     public boolean equals(Object o) {
