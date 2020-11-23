@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Data
@@ -11,9 +12,9 @@ import java.util.Objects;
 @Table(name = "QUOTES")
 @Getter @Setter @NoArgsConstructor @ToString
 @JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
         property = "id")
-public class Quote {
+public class Quote implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,8 +23,8 @@ public class Quote {
     private String content;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id", nullable = false)
-    @JsonBackReference
+    @JoinColumn(name = "author_id")
+    //@JsonIgnoreProperties("author")
     private Author author;
 
     public Quote(String content) {

@@ -1,15 +1,15 @@
 package com.cifojava.libraryexercise.Model;
 
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.annotation.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,9 +17,9 @@ import java.util.Objects;
 @Table (name = "USERS")
 @Getter @Setter @NoArgsConstructor @ToString
 @JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
         property = "id")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,8 +31,7 @@ public class User {
 
     @OneToMany(mappedBy = "user",
             cascade = CascadeType.ALL)
-    @JsonManagedReference
-    private List<Registry> registries;
+    private List<Registry> registries= new ArrayList<>();
 
     public User(String username, String password, int age) {
         this.username = username;

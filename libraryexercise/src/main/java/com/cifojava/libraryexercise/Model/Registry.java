@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,24 +14,24 @@ import java.util.Objects;
 @Table(name = "REGISTRY")
 @Getter @Setter @NoArgsConstructor @ToString
 @Entity
-public class Registry {
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
+        property = "id")
+public class Registry implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id", nullable = false)
-    @JsonBackReference
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "registry", cascade = CascadeType.ALL)
-    @JsonBackReference
-    private List<Book> books ;
+    @OneToMany(mappedBy = "registry",cascade = CascadeType.ALL)
+    private List<Book> books = new ArrayList<>();
 
     @OneToOne(mappedBy = "registry",
             cascade = CascadeType.ALL)
-    @JsonManagedReference
     private Date date;
 
 
