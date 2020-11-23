@@ -29,12 +29,12 @@ public class Author {
 
     @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonManagedReference
     private List<Book> books = new ArrayList<Book>();
 
     @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    @JsonBackReference
+    @JsonManagedReference
     private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {

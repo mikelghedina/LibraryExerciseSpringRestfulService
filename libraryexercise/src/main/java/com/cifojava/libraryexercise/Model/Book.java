@@ -27,12 +27,12 @@ public class Book {
     private int pages;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id")
+    @JoinColumn(name = "author_id", nullable = false)
     @JsonManagedReference
     private Author author;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "registry_id")
+    @JoinColumn(name = "registry_id", nullable = false)
     @JsonBackReference
     private Registry registry;
 

@@ -19,12 +19,12 @@ public class Registry {
     private Long id;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", nullable = false)
     @JsonBackReference
     private User user;
 
-    @OneToMany(mappedBy = "registry",cascade = CascadeType.ALL)
-    @JsonManagedReference
+    @OneToMany(mappedBy = "registry", cascade = CascadeType.ALL)
+    @JsonBackReference
     private List<Book> books ;
 
     @OneToOne(mappedBy = "registry",

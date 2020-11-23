@@ -28,7 +28,7 @@ public class Date {
     private int year;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "registry_id")
+    @JoinColumn(name = "registry_id", nullable = false)
     @JsonBackReference
     private Registry registry;
 
