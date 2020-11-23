@@ -1,19 +1,17 @@
 package com.cifojava.libraryexercise.Model;
 
-
-
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.ToString;
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 
-@Data
 @Entity
 @Table(name = "AUTHORS")
 @Getter @Setter @NoArgsConstructor @ToString
@@ -29,19 +27,23 @@ public class Author {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    private List<Book> books;
+    @JsonBackReference
+    private List<Book> books = new ArrayList<Book>();
 
-    @OneToMany(mappedBy = "author", fetch = FetchType.LAZY,
+    @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    private List<Quote> quotes;
+    @JsonBackReference
+    private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
         //this.fullName = name+ " " + lastName;
     }
+
+
 
     @Override
     public boolean equals(Object o) {

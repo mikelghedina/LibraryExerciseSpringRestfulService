@@ -5,6 +5,7 @@ import com.cifojava.libraryexercise.Service.QuoteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -16,7 +17,7 @@ public class QuoteRestController {
     QuoteService quoteService;
 
     @GetMapping("/quotes")
-    public Iterable<Quote> showQuotes(){
+    public List<Quote> showQuotes(){
         return quoteService.showQuotes();
     }
 

@@ -1,6 +1,9 @@
 package com.cifojava.libraryexercise.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,6 +16,9 @@ import java.util.Objects;
 @Entity
 @Table (name = "USERS")
 @Getter @Setter @NoArgsConstructor @ToString
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class User {
 
     @Id
@@ -23,7 +29,9 @@ public class User {
     private String password;
     private int age;
 
-    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user",
+            cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<Registry> registries;
 
     public User(String username, String password, int age) {

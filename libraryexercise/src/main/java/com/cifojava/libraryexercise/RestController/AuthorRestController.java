@@ -6,6 +6,7 @@ import com.cifojava.libraryexercise.Service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -17,7 +18,7 @@ public class AuthorRestController {
     AuthorService authorService;
 
     @GetMapping("/authors")
-    public Iterable<Author> showAuthors(){
+    public List<Author> showAuthors(){
         return authorService.findAllAuthors();
     }
 

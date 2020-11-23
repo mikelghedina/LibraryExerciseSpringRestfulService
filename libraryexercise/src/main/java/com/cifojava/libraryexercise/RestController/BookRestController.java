@@ -6,6 +6,7 @@ import com.cifojava.libraryexercise.Service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -18,7 +19,7 @@ public class BookRestController {
     BookService bookService;
 
     @GetMapping("/books")
-    public Iterable<Book> showBooks(){
+    public List<Book> showBooks(){
         return bookService.findAllBooks();
     }
 

@@ -1,6 +1,6 @@
 package com.cifojava.libraryexercise.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
@@ -10,6 +10,9 @@ import java.util.Objects;
 @Entity
 @Table(name = "QUOTES")
 @Getter @Setter @NoArgsConstructor @ToString
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Quote {
 
     @Id
@@ -18,9 +21,9 @@ public class Quote {
 
     private String content;
 
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
-    @JsonIgnore
+    @JsonBackReference
     private Author author;
 
     public Quote(String content) {
