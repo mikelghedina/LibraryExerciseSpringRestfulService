@@ -14,9 +14,9 @@ import java.util.Objects;
 @Table(name = "BOOKS")
 @Getter @Setter @NoArgsConstructor @ToString
 @JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
         property = "id")
-public class Book {
+public class Book implements Serializable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,13 +27,13 @@ public class Book {
     private int pages;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "author_id", nullable = false)
-    @JsonManagedReference
+    @JoinColumn(name = "author_id")
+    //@JsonIgnoreProperties("author")
     private Author author;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "registry_id", nullable = false)
-    @JsonBackReference
+    @JoinColumn(name = "registry_id")
+    //@JsonIgnoreProperties("registry")
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {
@@ -58,10 +58,10 @@ public class Book {
         return Objects.equals(this.id, book.id) && Objects.equals(this.title, book.title)
                 && Objects.equals(this.ISBN, book.ISBN);
     }
-    /*@Override
+    @Override
     public int hashCode() {
         return Objects.hash(this.id, this.title, this.ISBN,this.pages, this.author);
     }
-*/
+
 
 }

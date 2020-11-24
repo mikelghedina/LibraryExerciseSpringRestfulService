@@ -8,6 +8,7 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Data
@@ -15,9 +16,9 @@ import java.util.Objects;
 @Table(name="DATE")
 @Getter @Setter @NoArgsConstructor @ToString
 @JsonIdentityInfo(
-        generator = ObjectIdGenerators.PropertyGenerator.class,
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
         property = "id")
-public class Date {
+public class Date implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,8 +29,7 @@ public class Date {
     private int year;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "registry_id", nullable = false)
-    @JsonBackReference
+    @JoinColumn(name = "registry_id")
     private Registry registry;
 
     public Date(int day, int month, int year) {

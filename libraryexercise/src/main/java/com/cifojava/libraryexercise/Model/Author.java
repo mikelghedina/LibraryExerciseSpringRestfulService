@@ -1,12 +1,13 @@
 package com.cifojava.libraryexercise.Model;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -15,7 +16,10 @@ import java.util.Objects;
 @Entity
 @Table(name = "AUTHORS")
 @Getter @Setter @NoArgsConstructor @ToString
-public class Author {
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.IntSequenceGenerator.class,
+        property = "id")
+public class Author implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,12 +33,12 @@ public class Author {
 
     @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    @JsonManagedReference
+    //@JsonIgnoreProperties("books")
     private List<Book> books = new ArrayList<Book>();
 
     @OneToMany(mappedBy = "author",
             cascade = CascadeType.ALL)
-    @JsonManagedReference
+    //@JsonIgnoreProperties("quotes")
     private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {
@@ -42,8 +46,6 @@ public class Author {
         this.lastName = lastName;
         //this.fullName = name+ " " + lastName;
     }
-
-
 
     @Override
     public boolean equals(Object o) {
