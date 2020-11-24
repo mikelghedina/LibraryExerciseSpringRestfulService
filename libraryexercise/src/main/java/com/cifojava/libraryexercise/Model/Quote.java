@@ -1,20 +1,18 @@
 package com.cifojava.libraryexercise.Model;
 
-import com.fasterxml.jackson.annotation.*;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
+
 import java.util.Objects;
 
 @Data
 @Entity
 @Table(name = "QUOTES")
 @Getter @Setter @NoArgsConstructor @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class Quote implements Serializable {
+public class Quote {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,9 +20,9 @@ public class Quote implements Serializable {
 
     private String content;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "author_id")
-    //@JsonIgnoreProperties("author")
+    @JsonManagedReference
     private Author author;
 
     public Quote(String content) {

@@ -8,17 +8,13 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.Objects;
 
 @Data
 @Entity
 @Table(name="DATE")
 @Getter @Setter @NoArgsConstructor @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class Date implements Serializable {
+public class Date {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

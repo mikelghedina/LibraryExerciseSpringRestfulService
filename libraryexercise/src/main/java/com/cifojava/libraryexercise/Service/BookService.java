@@ -1,6 +1,9 @@
 package com.cifojava.libraryexercise.Service;
 
+import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Model.Book;
+import com.cifojava.libraryexercise.Model.Dto.BookDto;
+import com.cifojava.libraryexercise.Repository.AuthorRepository;
 import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,9 @@ public class BookService {
 
     @Autowired
     private BookRepository bookRepository;
+
+    @Autowired
+    private AuthorRepository authorRepository;
 
     public List<Book> findAllBooks(){
         return bookRepository.findAll();
@@ -39,5 +45,15 @@ public class BookService {
 
     /*public void assignAuthorToBook(Book book, Author author){
 
+    }*/
+    /*public BookDto convertToBookDto(Book book){
+        BookDto bookDto = new BookDto();
+        bookDto.setId(book.getId());
+        bookDto.setTitle(book.getTitle());
+        bookDto.setIsbn(book.getISBN());
+        bookDto.setPages(book.getPages());
+        bookDto.setAuthorName(book.getAuthor().getName());
+        bookDto.setAuthorLastName(book.getAuthor().getLastName());
+        return BookDto;
     }*/
 }

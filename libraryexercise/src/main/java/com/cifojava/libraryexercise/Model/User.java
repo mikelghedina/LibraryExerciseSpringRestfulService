@@ -8,7 +8,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 import javax.persistence.*;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,10 +15,7 @@ import java.util.Objects;
 @Entity
 @Table (name = "USERS")
 @Getter @Setter @NoArgsConstructor @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class User implements Serializable {
+public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -29,8 +25,8 @@ public class User implements Serializable {
     private String password;
     private int age;
 
-    @OneToMany(mappedBy = "user",
-            cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "user")
+    @JsonIgnore
     private List<Registry> registries= new ArrayList<>();
 
     public User(String username, String password, int age) {

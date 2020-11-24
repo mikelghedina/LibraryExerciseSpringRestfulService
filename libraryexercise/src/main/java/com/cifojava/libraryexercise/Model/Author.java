@@ -1,13 +1,14 @@
 package com.cifojava.libraryexercise.Model;
 
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -16,10 +17,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "AUTHORS")
 @Getter @Setter @NoArgsConstructor @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class Author implements Serializable {
+public class Author {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,14 +29,12 @@ public class Author implements Serializable {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "author",
-            cascade = CascadeType.ALL)
-    //@JsonIgnoreProperties("books")
+    @OneToMany(mappedBy = "author")
+    @JsonBackReference
     private List<Book> books = new ArrayList<Book>();
 
-    @OneToMany(mappedBy = "author",
-            cascade = CascadeType.ALL)
-    //@JsonIgnoreProperties("quotes")
+    @OneToMany(mappedBy = "author")
+    @JsonBackReference
     private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {

@@ -14,10 +14,7 @@ import java.util.Objects;
 @Table(name = "REGISTRY")
 @Getter @Setter @NoArgsConstructor @ToString
 @Entity
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class Registry implements Serializable {
+public class Registry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,11 +24,12 @@ public class Registry implements Serializable {
     @JoinColumn(name = "user_id")
     private User user;
 
-    @OneToMany(mappedBy = "registry",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "registry")
+    @JsonIgnore
     private List<Book> books = new ArrayList<>();
 
-    @OneToOne(mappedBy = "registry",
-            cascade = CascadeType.ALL)
+    @OneToOne(mappedBy = "registry")
+    @JsonIgnore
     private Date date;
 
 

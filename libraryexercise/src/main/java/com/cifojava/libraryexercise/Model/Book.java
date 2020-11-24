@@ -13,10 +13,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "BOOKS")
 @Getter @Setter @NoArgsConstructor @ToString
-@JsonIdentityInfo(
-        generator = ObjectIdGenerators.IntSequenceGenerator.class,
-        property = "id")
-public class Book implements Serializable{
+public class Book{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,14 +23,14 @@ public class Book implements Serializable{
     private String ISBN;
     private int pages;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "author_id")
-    //@JsonIgnoreProperties("author")
+    @JsonManagedReference
     private Author author;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "registry_id")
-    //@JsonIgnoreProperties("registry")
+    @JsonManagedReference
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {
