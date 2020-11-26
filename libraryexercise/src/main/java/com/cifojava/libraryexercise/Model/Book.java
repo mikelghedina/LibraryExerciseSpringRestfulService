@@ -16,7 +16,7 @@ import java.util.Objects;
 public class Book{
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String title;
@@ -24,13 +24,11 @@ public class Book{
     private int pages;
 
     @ManyToOne
-    @JoinColumn(name = "author_id")
-    @JsonManagedReference
+    @JoinColumn(name = "author_id", nullable = true)
     private Author author;
 
     @ManyToOne
-    @JoinColumn(name = "registry_id")
-    @JsonManagedReference
+    @JoinColumn(name = "registry_id", nullable = true)
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {
