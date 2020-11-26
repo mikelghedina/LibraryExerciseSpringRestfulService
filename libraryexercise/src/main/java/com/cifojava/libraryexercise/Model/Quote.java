@@ -15,14 +15,13 @@ import java.util.Objects;
 public class Quote {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String content;
 
     @ManyToOne
-    @JoinColumn(name = "author_id")
-    @JsonManagedReference
+    @JoinColumn(name = "author_id", nullable = true)
     private Author author;
 
     public Quote(String content) {

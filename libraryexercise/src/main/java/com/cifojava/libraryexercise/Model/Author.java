@@ -20,7 +20,7 @@ import java.util.Objects;
 public class Author {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     //private String fullName;
@@ -30,11 +30,11 @@ public class Author {
     private String lastName;
 
     @OneToMany(mappedBy = "author")
-    @JsonBackReference
+    @JsonIgnore
     private List<Book> books = new ArrayList<Book>();
 
     @OneToMany(mappedBy = "author")
-    @JsonBackReference
+    @JsonIgnore
     private List<Quote> quotes= new ArrayList<Quote>();
 
     public Author(String name, String lastName) {

@@ -186,16 +186,16 @@
       <ObjectId>9</ObjectId>
     </table>
     <table id="167" parent="4" name="HIBERNATE_SEQUENCE">
-      <ObjectId>16</ObjectId>
+      <ObjectId>12</ObjectId>
     </table>
     <table id="168" parent="4" name="QUOTES">
-      <ObjectId>17</ObjectId>
+      <ObjectId>13</ObjectId>
     </table>
     <table id="169" parent="4" name="REGISTRY">
-      <ObjectId>20</ObjectId>
+      <ObjectId>16</ObjectId>
     </table>
     <table id="170" parent="4" name="USERS">
-      <ObjectId>23</ObjectId>
+      <ObjectId>19</ObjectId>
     </table>
     <column id="171" parent="164" name="ID">
       <Position>1</Position>
@@ -258,14 +258,14 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="183" parent="165" name="FKFJIXH2VYM2CVFJ3UFXJ91JEM7_INDEX_3">
-      <ObjectId>26</ObjectId>
+      <ObjectId>22</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>92</SourceTextLength>
       <ColNames>AUTHOR_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="184" parent="165" name="FKFJN66INTD8SYSXNSJ6MQVFMMR_INDEX_3">
-      <ObjectId>28</ObjectId>
+      <ObjectId>24</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>94</SourceTextLength>
       <ColNames>REGISTRY_ID</ColNames>
@@ -325,7 +325,7 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="194" parent="166" name="FKAJRYKP9HB40V5W7B0TOS15SOE_INDEX_1">
-      <ObjectId>30</ObjectId>
+      <ObjectId>26</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>REGISTRY_ID</ColNames>
@@ -362,7 +362,7 @@
       <DataType>BIGINT|0s</DataType>
     </column>
     <index id="201" parent="168" name="PRIMARY_KEY_8">
-      <ObjectId>18</ObjectId>
+      <ObjectId>14</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
       <ColNames>ID</ColNames>
@@ -370,7 +370,7 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="202" parent="168" name="FKSI54DKY8VTDMINFHDM3IICPEP_INDEX_8">
-      <ObjectId>32</ObjectId>
+      <ObjectId>28</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>AUTHOR_ID</ColNames>
@@ -399,7 +399,7 @@
       <DataType>BIGINT|0s</DataType>
     </column>
     <index id="207" parent="169" name="PRIMARY_KEY_5">
-      <ObjectId>21</ObjectId>
+      <ObjectId>17</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>72</SourceTextLength>
       <ColNames>ID</ColNames>
@@ -407,7 +407,7 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="208" parent="169" name="FK4BSKB4QL8PS99SW7N2MGHDQ21_INDEX_5">
-      <ObjectId>34</ObjectId>
+      <ObjectId>30</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>USER_ID</ColNames>
@@ -445,7 +445,7 @@
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
     <index id="215" parent="170" name="PRIMARY_KEY_4D">
-      <ObjectId>24</ObjectId>
+      <ObjectId>20</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
       <ColNames>ID</ColNames>
