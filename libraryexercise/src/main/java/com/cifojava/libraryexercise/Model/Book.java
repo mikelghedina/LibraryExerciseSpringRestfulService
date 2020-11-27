@@ -29,6 +29,7 @@ public class Book{
 
     @ManyToOne
     @JoinColumn(name = "registry_id", nullable = true)
+    @JsonIgnore
     private Registry registry;
 
     public Book(String title, String ISBN, int pages) {

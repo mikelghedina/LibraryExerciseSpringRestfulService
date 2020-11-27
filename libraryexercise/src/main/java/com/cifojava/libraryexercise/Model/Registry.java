@@ -25,7 +25,6 @@ public class Registry {
     private User user;
 
     @OneToMany(mappedBy = "registry")
-    @JsonIgnore
     private List<Book> books = new ArrayList<>();
 
     @OneToOne(mappedBy = "registry")
