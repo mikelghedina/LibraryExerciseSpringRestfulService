@@ -20,8 +20,11 @@ public class BookRestController {
 
     @GetMapping("/books")
     public List<Book> showBooks(){
+
         return bookService.findAllBooks();
     }
+
+
 
     @PostMapping("/books")
     public Book newBook(@RequestBody Book book){
@@ -50,7 +53,6 @@ public class BookRestController {
     public void deleteBookById(@PathVariable Long id){
         bookService.deleteBookById(id);
     }
-
 
 
 

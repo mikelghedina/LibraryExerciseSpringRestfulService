@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.List;
+import java.sql.Blob;
 import java.util.Objects;
 
 
@@ -22,6 +21,10 @@ public class Book{
     private String title;
     private String ISBN;
     private int pages;
+    private String synopsis;
+
+    @Lob
+    private Blob image;
 
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = true)
