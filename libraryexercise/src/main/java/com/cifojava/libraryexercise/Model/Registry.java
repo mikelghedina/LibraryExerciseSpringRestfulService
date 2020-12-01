@@ -1,12 +1,16 @@
 package com.cifojava.libraryexercise.Model;
 
 
-import com.fasterxml.jackson.annotation.*;
+
 import lombok.*;
+import org.hibernate.annotations.CreationTimestamp;
+
 
 import javax.persistence.*;
-import java.io.Serializable;
+
+
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,11 +29,10 @@ public class Registry {
     private User user;
 
     @OneToMany(mappedBy = "registry")
-    @JsonIgnore
     private List<Book> books = new ArrayList<>();
 
-    @OneToOne(mappedBy = "registry")
-    @JsonIgnore
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
 

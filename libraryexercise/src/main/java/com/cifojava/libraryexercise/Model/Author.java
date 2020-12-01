@@ -40,7 +40,6 @@ public class Author {
     public Author(String name, String lastName) {
         this.name = name;
         this.lastName = lastName;
-        //this.fullName = name+ " " + lastName;
     }
 
     @Override
