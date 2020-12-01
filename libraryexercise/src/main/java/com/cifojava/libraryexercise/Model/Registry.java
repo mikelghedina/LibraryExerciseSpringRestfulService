@@ -1,12 +1,13 @@
 package com.cifojava.libraryexercise.Model;
 
 
-import com.fasterxml.jackson.annotation.*;
+
 import lombok.*;
-import org.springframework.data.annotation.CreatedBy;
-import org.springframework.data.annotation.CreatedDate;
+import org.hibernate.annotations.CreationTimestamp;
+
 
 import javax.persistence.*;
+
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,7 +22,6 @@ public class Registry {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @CreatedBy
     private Long id;
 
     @ManyToOne
@@ -31,7 +31,8 @@ public class Registry {
     @OneToMany(mappedBy = "registry")
     private List<Book> books = new ArrayList<>();
 
-    @CreatedDate
+    @CreationTimestamp
+    @Temporal(TemporalType.TIMESTAMP)
     private Date date;
 
 
