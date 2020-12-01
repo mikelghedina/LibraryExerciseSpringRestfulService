@@ -1,15 +1,11 @@
 package com.cifojava.libraryexercise.Service;
 
-import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Model.Book;
-import com.cifojava.libraryexercise.Model.Dto.BookDto;
-import com.cifojava.libraryexercise.Repository.AuthorRepository;
 import com.cifojava.libraryexercise.Repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 import java.util.Optional;
 
 
@@ -21,7 +17,7 @@ public class BookService {
     private BookRepository bookRepository;
 
 
-    public List<Book> findAllBooks(){
+    public Iterable<Book> findAllBooks(){
         return bookRepository.findAll();
     }
 

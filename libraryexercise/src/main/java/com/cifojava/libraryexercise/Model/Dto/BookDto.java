@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.sql.Blob;
+
 @Data
 @Getter @Setter @NoArgsConstructor
 public class BookDto {
@@ -15,5 +17,6 @@ public class BookDto {
     private int pages;
     private String authorName;
     private String authorLastName;
+    private Blob image;
 
 }

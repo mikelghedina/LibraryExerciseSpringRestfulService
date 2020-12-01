@@ -18,13 +18,11 @@ public class BookRestController {
     @Autowired
     BookService bookService;
 
-    @GetMapping("/books")
-    public List<Book> showBooks(){
 
+    @GetMapping("/books")
+    public Iterable<Book> showBooks(){
         return bookService.findAllBooks();
     }
-
-
 
     @PostMapping("/books")
     public Book newBook(@RequestBody Book book){
