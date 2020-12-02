@@ -7,15 +7,11 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface BookMapper {
 
     BookDto toBookDto(Book book);
 
     List<BookDto> toBookDTOs(List<Book> books);
-
-
-
-
 
 }

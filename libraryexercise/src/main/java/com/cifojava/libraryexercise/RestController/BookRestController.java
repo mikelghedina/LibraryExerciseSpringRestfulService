@@ -2,8 +2,11 @@ package com.cifojava.libraryexercise.RestController;
 
 
 import com.cifojava.libraryexercise.Model.Book;
+import com.cifojava.libraryexercise.Model.Dto.BookDto;
 import com.cifojava.libraryexercise.Service.BookService;
+import com.cifojava.libraryexercise.Service.Mapper.BookMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -18,10 +21,12 @@ public class BookRestController {
     @Autowired
     BookService bookService;
 
-    @GetMapping("/books")
-    public List<Book> showBooks(){
+    BookMapper bookMapper;
 
-        return bookService.findAllBooks();
+    @GetMapping("/books")
+    public ResponseEntity<List<BookDto>> showBooks(){
+
+        return ResponseEntity.ok(bookMapper.toBookDTOs(bookService.findAllBooks()));
     }
 
 
