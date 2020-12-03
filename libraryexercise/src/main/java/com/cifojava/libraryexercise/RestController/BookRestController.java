@@ -23,13 +23,16 @@ public class BookRestController {
 
     BookMapper bookMapper;
 
-    @GetMapping("/books")
+    /*@GetMapping("/books")
     public ResponseEntity<List<BookDto>> showBooks(){
 
         return ResponseEntity.ok(bookMapper.toBookDTOs(bookService.findAllBooks()));
+    }*/
+
+    @GetMapping("/books")
+    public List<Book> showBooks(){
+        return bookService.findAllBooks();
     }
-
-
 
     @PostMapping("/books")
     public Book newBook(@RequestBody Book book){
