@@ -30,7 +30,7 @@ public class BookRestController {
     }*/
 
     @GetMapping("/books")
-    public List<Book> showBooks(){
+    public Iterable<Book> showBooks(){
         return bookService.findAllBooks();
     }
 
