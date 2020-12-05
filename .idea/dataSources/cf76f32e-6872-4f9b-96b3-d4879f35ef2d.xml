@@ -176,32 +176,32 @@
     <collation id="161" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="162" parent="2" name="VIETNAMESE"/>
     <collation id="163" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_0BDD296E_1FB3_44BE_9697_F93870B9D781">
-      <ObjectId>18</ObjectId>
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_07B6AEDB_7F60_47F2_87CF_03B8DD4E4DB6">
+      <ObjectId>14</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_21EA8F5B_6904_43C4_96E3_BB526EE6A70D">
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_1E59473F_3C99_4C9F_9AF5_14E229DE0F87">
       <ObjectId>9</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_2C83B481_2E02_4197_A137_EE27E8FD01FF">
+    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_3F88625A_BF7D_4555_8B38_07C6112E0A59">
       <ObjectId>25</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_7ED0ED36_354D_4418_9EF7_6038B1F71195">
-      <ObjectId>29</ObjectId>
+    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_58D62D2D_4F22_4FF3_A2B3_330C172DA8CA">
+      <ObjectId>4</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_84B18976_3608_41F7_AFBD_15D36A9BF16E">
-      <ObjectId>4</ObjectId>
+    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_734FD068_915F_47E0_959C_7A2281B7376C">
+      <ObjectId>18</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
@@ -219,13 +219,13 @@
       <ObjectId>13</ObjectId>
     </table>
     <table id="173" parent="4" name="QUOTES">
-      <ObjectId>17</ObjectId>
+      <ObjectId>12</ObjectId>
     </table>
     <table id="174" parent="4" name="REGISTRY">
-      <ObjectId>42</ObjectId>
+      <ObjectId>17</ObjectId>
     </table>
     <table id="175" parent="4" name="USERS">
-      <ObjectId>28</ObjectId>
+      <ObjectId>21</ObjectId>
     </table>
     <table id="176" parent="4" name="USERS_REGISTRIES">
       <ObjectId>22</ObjectId>
@@ -267,48 +267,48 @@
       <Position>2</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <column id="184" parent="170" name="PAGES">
+    <column id="184" parent="170" name="IMAGE">
       <Position>3</Position>
+      <DataType>LONGBLOB|0s</DataType>
+    </column>
+    <column id="185" parent="170" name="PAGES">
+      <Position>4</Position>
       <DataType>INTEGER|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="185" parent="170" name="TITLE">
-      <Position>4</Position>
-      <DataType>VARCHAR(255)|0s</DataType>
-    </column>
-    <column id="186" parent="170" name="AUTHOR_ID">
+    <column id="186" parent="170" name="SYNOPSIS">
       <Position>5</Position>
-      <DataType>BIGINT|0s</DataType>
-    </column>
-    <column id="187" parent="170" name="REGISTRY_ID">
-      <Position>6</Position>
-      <DataType>BIGINT|0s</DataType>
-    </column>
-    <column id="188" parent="170" name="IMAGE">
-      <Position>7</Position>
-      <DataType>LONGBLOB|0s</DataType>
-    </column>
-    <column id="189" parent="170" name="SYNOPSIS">
-      <Position>8</Position>
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
-    <index id="190" parent="170" name="PRIMARY_KEY_1E3">
+    <column id="187" parent="170" name="TITLE">
+      <Position>6</Position>
+      <DataType>VARCHAR(255)|0s</DataType>
+    </column>
+    <column id="188" parent="170" name="AUTHOR_ID">
+      <Position>7</Position>
+      <DataType>BIGINT|0s</DataType>
+    </column>
+    <column id="189" parent="170" name="REGISTRY_ID">
+      <Position>8</Position>
+      <DataType>BIGINT|0s</DataType>
+    </column>
+    <index id="190" parent="170" name="PRIMARY_KEY_3">
       <ObjectId>10</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>71</SourceTextLength>
+      <SourceTextLength>69</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="191" parent="170" name="FKFJIXH2VYM2CVFJ3UFXJ91JEM7_INDEX_1">
-      <ObjectId>32</ObjectId>
+    <index id="191" parent="170" name="FKFJIXH2VYM2CVFJ3UFXJ91JEM7_INDEX_3">
+      <ObjectId>28</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>92</SourceTextLength>
       <ColNames>AUTHOR_ID</ColNames>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="192" parent="170" name="FKFJN66INTD8SYSXNSJ6MQVFMMR_INDEX_1">
-      <ObjectId>34</ObjectId>
+    <index id="192" parent="170" name="FKFJN66INTD8SYSXNSJ6MQVFMMR_INDEX_3">
+      <ObjectId>30</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>94</SourceTextLength>
       <ColNames>REGISTRY_ID</ColNames>
@@ -330,7 +330,7 @@
     <foreign-key id="195" parent="170" name="FKFJN66INTD8SYSXNSJ6MQVFMMR">
       <ColNames>REGISTRY_ID</ColNames>
       <RefTableName>REGISTRY</RefTableName>
-      <RefKeyName>PRIMARY_KEY_86</RefKeyName>
+      <RefKeyName>PRIMARY_KEY_5</RefKeyName>
       <RefColNames>ID</RefColNames>
       <OnDelete>restrict</OnDelete>
       <OnUpdate>restrict</OnUpdate>
@@ -364,7 +364,7 @@
       <DataType>BIGINT|0s</DataType>
     </column>
     <index id="202" parent="173" name="PRIMARY_KEY_8">
-      <ObjectId>19</ObjectId>
+      <ObjectId>15</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
       <ColNames>ID</ColNames>
@@ -372,7 +372,7 @@
       <AutoCreated>1</AutoCreated>
     </index>
     <index id="203" parent="173" name="FKSI54DKY8VTDMINFHDM3IICPEP_INDEX_8">
-      <ObjectId>38</ObjectId>
+      <ObjectId>32</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>AUTHOR_ID</ColNames>
@@ -397,24 +397,24 @@
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="207" parent="174" name="USER_ID">
+    <column id="207" parent="174" name="DATE">
       <Position>2</Position>
+      <DataType>DATE|0s</DataType>
+    </column>
+    <column id="208" parent="174" name="USER_ID">
+      <Position>3</Position>
       <DataType>BIGINT|0s</DataType>
     </column>
-    <column id="208" parent="174" name="DATE">
-      <Position>3</Position>
-      <DataType>DATETIME|0s</DataType>
-    </column>
-    <index id="209" parent="174" name="PRIMARY_KEY_86">
-      <ObjectId>43</ObjectId>
+    <index id="209" parent="174" name="PRIMARY_KEY_5">
+      <ObjectId>19</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <SourceTextLength>73</SourceTextLength>
+      <SourceTextLength>72</SourceTextLength>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
       <AutoCreated>1</AutoCreated>
     </index>
-    <index id="210" parent="174" name="FK4BSKB4QL8PS99SW7N2MGHDQ21_INDEX_8">
-      <ObjectId>47</ObjectId>
+    <index id="210" parent="174" name="FK4BSKB4QL8PS99SW7N2MGHDQ21_INDEX_5">
+      <ObjectId>34</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>93</SourceTextLength>
       <ColNames>USER_ID</ColNames>
@@ -453,7 +453,7 @@
       <DataType>VARCHAR(255)|0s</DataType>
     </column>
     <index id="217" parent="175" name="PRIMARY_KEY_4D">
-      <ObjectId>30</ObjectId>
+      <ObjectId>26</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <SourceTextLength>70</SourceTextLength>
       <ColNames>ID</ColNames>

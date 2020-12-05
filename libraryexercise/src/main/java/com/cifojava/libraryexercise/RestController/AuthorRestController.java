@@ -3,6 +3,7 @@ package com.cifojava.libraryexercise.RestController;
 
 import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Service.AuthorService;
+import com.cifojava.libraryexercise.Service.Mapper.BookMapper;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +19,6 @@ public class AuthorRestController {
     @Autowired
     AuthorService authorService;
 
-    @Autowired
-    ObjectMapper objectMapper;
 
     @GetMapping("/authors")
     public List<Author> showAuthors(){
