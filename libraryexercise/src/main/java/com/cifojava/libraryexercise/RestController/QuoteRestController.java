@@ -17,7 +17,7 @@ public class QuoteRestController {
     QuoteService quoteService;
 
     @GetMapping("/quotes")
-    public List<Quote> showQuotes(){
+    public Iterable<Quote> showQuotes(){
         return quoteService.showQuotes();
     }
 

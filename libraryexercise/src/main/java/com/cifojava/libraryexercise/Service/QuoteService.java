@@ -17,7 +17,7 @@ public class QuoteService {
     @Autowired
     private QuoteRepository quoteRepository;
 
-    public List<Quote> showQuotes(){
+    public Iterable<Quote> showQuotes(){
         return quoteRepository.findAll();
     }
     public Optional<Quote> findOneQuoteById(Long id){
