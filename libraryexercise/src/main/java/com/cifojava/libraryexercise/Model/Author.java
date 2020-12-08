@@ -24,11 +24,11 @@ public class Author {
 
     @OneToMany(mappedBy = "author")
     @JsonIgnore
-    private List<Book> books = new ArrayList<Book>();
+    private List<Book> books = new ArrayList<>();
 
     @OneToMany(mappedBy = "author")
     @JsonIgnore
-    private List<Quote> quotes= new ArrayList<Quote>();
+    private List<Quote> quotes= new ArrayList<>();
 
     public Author(String name, String lastName) {
         this.name = name;
