@@ -176,32 +176,32 @@
     <collation id="161" parent="2" name="UKRAINIAN_UKRAINE"/>
     <collation id="162" parent="2" name="VIETNAMESE"/>
     <collation id="163" parent="2" name="VIETNAMESE_VIETNAM"/>
-    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_086CF6B0_80B1_4310_9C9B_F209B565597F">
-      <ObjectId>8</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_2A2FFB1A_A304_4FA0_B2EF_DE4AE6AA81C8">
-      <ObjectId>4</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CacheSize>32</CacheSize>
-      <AutoCreated>1</AutoCreated>
-    </sequence>
-    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_2D397537_E9D9_4C62_956A_FEFB64FA3AA0">
+    <sequence id="164" parent="4" name="SYSTEM_SEQUENCE_2275887F_D36B_435C_BD10_C29C52006F14">
       <ObjectId>13</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_46145D99_EA3A_47FA_9CAD_5AD0924BCEA6">
+    <sequence id="165" parent="4" name="SYSTEM_SEQUENCE_27C87734_91C2_4A73_A8DD_F0A4A9A314FA">
       <ObjectId>21</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
     </sequence>
-    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_9449DC2F_4CF8_4189_9310_B1CD07A10D21">
+    <sequence id="166" parent="4" name="SYSTEM_SEQUENCE_534D1872_3C77_4CCB_AA2B_748B9C93BFC8">
+      <ObjectId>4</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="167" parent="4" name="SYSTEM_SEQUENCE_93134CE9_0DD6_4FB1_97D7_91CF533E34A1">
       <ObjectId>17</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CacheSize>32</CacheSize>
+      <AutoCreated>1</AutoCreated>
+    </sequence>
+    <sequence id="168" parent="4" name="SYSTEM_SEQUENCE_FE786215_DAC5_4A73_A4A9_9866C24DD05E">
+      <ObjectId>8</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CacheSize>32</CacheSize>
       <AutoCreated>1</AutoCreated>
