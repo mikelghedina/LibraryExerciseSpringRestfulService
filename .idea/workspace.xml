@@ -23,32 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b56cc7ed-7efa-4f2e-ad30-b69d9510f0a6" name="Default Changelist" comment="Class updates to project.">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cf76f32e-6872-4f9b-96b3-d4879f35ef2d/storage_v2/_src_/database/MYDB.KlckAA/schema/PUBLIC.aaZQjQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Configuration/SpringFoxConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Configuration/SpringFoxConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Author.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Dto/BookDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Dto/BookDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Quote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Registry.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/Registry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/AuthorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/AuthorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/QuoteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/QuoteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/RegistryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/RegistryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/AuthorRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/AuthorRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/BookRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/BookRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/QuoteRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/QuoteRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/RegistryRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/RegistryRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/RestController/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/AuthorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/AuthorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/Mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/Mapper/BookMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/QuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/QuoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/RegistryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/RegistryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/java/com/cifojava/libraryexercise/Service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libraryexercise/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/libraryexercise/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,13 +179,6 @@
       <workItem from="1607441154741" duration="5708000" />
       <workItem from="1607456698705" duration="2382000" />
       <workItem from="1607459323022" duration="1406000" />
-    </task>
-    <task id="LOCAL-00004" summary="Class updates to project.">
-      <created>1605034368249</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1605034368249</updated>
     </task>
     <task id="LOCAL-00005" summary="Class updates to project.">
       <created>1605041251486</created>
@@ -545,7 +516,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607459095177</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Class updates to project.">
+      <created>1607601689677</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1607601689677</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -646,62 +624,62 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="681" y="225" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1604919821999" />
-    <state width="636" height="282" key="GridCell.Tab.0.bottom" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.0.bottom" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605051359212" />
-    <state width="636" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.0.center" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.0.center" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539430" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605051359211" />
-    <state width="636" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.0.left" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.0.left" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539430" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605051359211" />
-    <state width="636" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.0.right" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.0.right" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605051359211" />
-    <state width="636" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.1.bottom" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.1.bottom" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.1.bottom/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605051359212" />
-    <state width="636" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.1.center" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.1.center" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.1.center/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605051359212" />
-    <state width="636" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.1.left" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.1.left" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.1.left/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605051359212" />
-    <state width="636" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
-    <state width="636" height="282" key="GridCell.Tab.1.right" timestamp="1607599985970">
+    <state width="636" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
+    <state width="636" height="282" key="GridCell.Tab.1.right" timestamp="1607602525746">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1024" height="210" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605724527376" />
     <state width="1382" height="331" key="GridCell.Tab.1.right/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607459539431" />
     <state width="1493" height="210" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605051359212" />
-    <state width="636" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607599985970" />
+    <state width="636" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607602525746" />
     <state width="1877" height="348" key="GridCell.Tab.2.bottom" timestamp="1605618040162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -745,13 +723,13 @@
     <state x="352" y="0" key="SettingsEditor/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605719554332" />
     <state x="360" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1605050635819" />
     <state x="440" y="94" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606991649779" />
-    <state x="2509" y="271" key="Vcs.Push.Dialog.v2" timestamp="1607456597498">
-      <screen x="1920" y="0" width="2048" height="1112" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1607602533836">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2048.1112@0.0.1536.824" timestamp="1605715357208" />
     <state x="2509" y="271" key="Vcs.Push.Dialog.v2/0.0.1536.824/1920.0.2048.1112@1920.0.2048.1112" timestamp="1607456597498" />
     <state x="442" y="200" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605045296619" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606913732338" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607602533836" />
     <state x="640" y="257" key="cloudConfig.SelfSettingsDialog" timestamp="1605036448624">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

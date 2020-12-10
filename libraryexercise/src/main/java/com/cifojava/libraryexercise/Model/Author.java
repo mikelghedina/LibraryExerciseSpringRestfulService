@@ -25,12 +25,13 @@ public class Author {
     //Here we define a relationship 1-n with books. So one author can have many books.
     //We also define "in this case" that we do not want to show the books stored in Author when we parse it to JSON.
     //So JSONIGNORE annotation helps us resolve the infinite recursion problem.
+    //Also define CascadeType.ALL because we only want that when we remove an Author all the books related will be deleted.
     @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Book> books = new ArrayList<>();
 
     //Same from above but with QUOTE class...
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Quote> quotes= new ArrayList<>();
 

@@ -24,6 +24,7 @@ public class Book{
 
     //We close the relationship with author by the MANYTOONE annotation. nullable true by default.
     //Do not use JsonIgnore annotation here so we can visualize the AUTHOR related to Book.
+    //We do not use Cascade so if we remove a book, the author related won't be deleted too.
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = true)
     private Author author;

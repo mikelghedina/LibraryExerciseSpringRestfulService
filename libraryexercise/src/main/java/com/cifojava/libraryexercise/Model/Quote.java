@@ -20,6 +20,7 @@ public class Quote {
 
     //Closing relationship with AUTHOR class, also we do need to use the AUTHOR data related in Json so
     //we won't be using JsonIgnore here.
+    //Not cascade to do not remove the author related to this Quote.
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = true)
     private Author author;
