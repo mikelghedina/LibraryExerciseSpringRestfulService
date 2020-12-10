@@ -4,9 +4,9 @@ import com.cifojava.libraryexercise.Model.Author;
 import com.cifojava.libraryexercise.Repository.AuthorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 
+import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 

@@ -1,14 +1,7 @@
 package com.cifojava.libraryexercise.Model;
-
-
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.*;
-
 import javax.persistence.*;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -29,13 +22,13 @@ public class Author {
 
     private String lastName;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Book> books = new ArrayList<Book>();
+    private List<Book> books = new ArrayList<>();
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "author", cascade = CascadeType.ALL)
     @JsonIgnore
-    private List<Quote> quotes= new ArrayList<Quote>();
+    private List<Quote> quotes= new ArrayList<>();
 
     public Author(String name, String lastName) {
         this.name = name;

@@ -5,19 +5,19 @@ import com.cifojava.libraryexercise.Model.Quote;
 import com.cifojava.libraryexercise.Repository.QuoteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import javax.transaction.Transactional;
 import java.util.Optional;
 
 @Service
+@Transactional
 public class QuoteService {
 
 
     @Autowired
     private QuoteRepository quoteRepository;
 
-    public List<Quote> showQuotes(){
+    public Iterable<Quote> showQuotes(){
         return quoteRepository.findAll();
     }
     public Optional<Quote> findOneQuoteById(Long id){
