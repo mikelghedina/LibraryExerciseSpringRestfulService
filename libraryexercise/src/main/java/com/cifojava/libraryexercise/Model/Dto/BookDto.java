@@ -7,6 +7,7 @@ import lombok.Setter;
 
 import java.sql.Blob;
 
+//This is a try of creating a DTO class for books. Not implemented, got no time for that.
 @Data
 @Getter @Setter @NoArgsConstructor
 public class BookDto {

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 import java.util.Objects;
 
-
+//QUOTE ENTITY CLASS
 @Entity
 @Table(name = "QUOTES")
 @Getter @Setter @NoArgsConstructor @ToString
@@ -18,6 +18,8 @@ public class Quote {
 
     private String content;
 
+    //Closing relationship with AUTHOR class, also we do need to use the AUTHOR data related in Json so
+    //we won't be using JsonIgnore here.
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = true)
     private Author author;

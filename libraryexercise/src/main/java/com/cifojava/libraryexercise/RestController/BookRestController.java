@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
-
+//Setting as rest controller.
+//CrossOrigins setted in order to guarantee access when we make calls from the front-end (in our case, the react app that
+//uses this url in his local server created by node.js
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api")

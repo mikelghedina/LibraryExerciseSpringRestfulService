@@ -24,18 +24,20 @@ public class Registry {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    //Closing relationship with USER class. We do need to use the user data when parsed in Json
+    //So we won't be using JsonIgnore annotation here.
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+    //Mapping the relationship with books
+    //No JsonIgnore so we need to see the books related to registry object when parsed to Json.
     @OneToMany(mappedBy = "registry")
     private List<Book> books = new ArrayList<>();
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)
     private Date date;
-
-
 
     @Override
     public boolean equals(Object o) {

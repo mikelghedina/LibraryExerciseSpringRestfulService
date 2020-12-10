@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+//USER ENTITY CLASS
 @Entity
 @Table (name = "USERS")
 @Getter @Setter @NoArgsConstructor @ToString
@@ -25,6 +26,8 @@ public class User {
     private String password;
     private int age;
 
+    //Using JsonIgnore because we won't be using the registries data when calling users from API.
+    //So one more time we solve the infinite recursion problem when accessing data from API REQUEST METHODS.
     @OneToMany(mappedBy = "user")
     @JsonIgnore
     private List<Registry> registries= new ArrayList<>();

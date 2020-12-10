@@ -4,10 +4,9 @@ import com.fasterxml.jackson.annotation.*;
 import lombok.*;
 
 import javax.persistence.*;
-import java.sql.Blob;
 import java.util.Objects;
 
-
+//BOOK ENTITY CLASS
 @Entity
 @Table(name = "BOOKS")
 @Getter @Setter @NoArgsConstructor @ToString
@@ -22,13 +21,15 @@ public class Book{
     private int pages;
     private String synopsis;
 
-    @Lob
-    private Blob image;
 
+    //We close the relationship with author by the MANYTOONE annotation. nullable true by default.
+    //Do not use JsonIgnore annotation here so we can visualize the AUTHOR related to Book.
     @ManyToOne
     @JoinColumn(name = "author_id", nullable = true)
     private Author author;
 
+    //Closing relationship with Registry but using JsonIgnore here so we do not need to use
+    //the data from Registry class. Then we solve the infinite recursion problem.
     @ManyToOne
     @JoinColumn(name = "registry_id", nullable = true)
     @JsonIgnore
